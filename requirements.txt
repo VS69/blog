@@ -1,0 +1,14 @@
+Django>=1.10,<1.11
+Pillow
+django-mptt
+django-tagging
+beautifulsoup4
+mots-vides
+regex
+django-contrib-comments
+pytz
+pyparsing
+django-xmlrpc
+python-decouple
+django-blog-zinnia
+psycopg2
