@@ -1,2 +1,2 @@
-# studentsdb
+# blog
 My personal blog (Django + Zinnia)
