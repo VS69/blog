@@ -13,3 +13,5 @@ python-decouple
 django-blog-zinnia
 psycopg2
 Textile
+django-admin-tools
+admin-tools-zinnia

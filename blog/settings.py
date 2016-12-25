@@ -34,6 +34,11 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    # 'admin_tools',
+    # 'admin_tools.theming',
+    # 'admin_tools.menu',
+    # 'admin_tools.dashboard',
+    # 'admin_tools_zinnia',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.sites',
@@ -137,6 +142,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+ZINNIA_SPAM_CHECKER_BACKENDS = (
+    'zinnia.spam_checker.backends.long_enough',
+)
 
 
 # Internationalization
