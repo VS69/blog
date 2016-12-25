@@ -32,11 +32,14 @@ from zinnia.sitemaps import AuthorSitemap
 from zinnia.sitemaps import CategorySitemap
 from zinnia.sitemaps import EntrySitemap
 from zinnia.sitemaps import TagSitemap
+from zinnia.views.channels import EntryChannel
 
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(url='/blog/', permanent=True)),
-    url(r'^blog/', include('zinnia.urls')),
+    url(r'^blog/$',
+        EntryChannel.as_view(query='category:python OR category:django')),
+    url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
     url(r'^comments/', include('django_comments.urls')),
     url(r'^xmlrpc/$', handle_xmlrpc),
     url(r'^i18n/', include('django.conf.urls.i18n')),
