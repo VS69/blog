@@ -12,3 +12,4 @@ django-xmlrpc
 python-decouple
 django-blog-zinnia
 psycopg2
+Textile

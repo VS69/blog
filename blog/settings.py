@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 from decouple import config, Csv
+from zinnia.xmlrpc import ZINNIA_XMLRPC_METHODS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.contenttypes',
+    'django.contrib.sitemaps',
     'django_comments',
+    'django_xmlrpc',
     'mptt',
     'tagging',
     'zinnia',
@@ -76,7 +79,30 @@ TEMPLATES = [
     },
 ]
 
+
+ZINNIA_ENTRY_CONTENT_TEMPLATES = [
+    ('zinnia/_short_entry_detail.html', 'Short entry template'),
+]
+
+
+ZINNIA_ENTRY_DETAIL_TEMPLATES = [
+    ('zinnia/fullwidth_entry_detail.html', 'Fullwidth template'),
+]
+
+
 WSGI_APPLICATION = 'blog.wsgi.application'
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    },
+    'comparison': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'comparison',
+        'TIMEOUT': None,
+    }
+}
 
 
 # Database
@@ -157,3 +183,10 @@ MANAGERS = (('Manager', ADMIN_EMAIL),)
 
 
 SITE_ID = 1
+
+ZINNIA_PING_EXTERNAL_URLS = False
+ZINNIA_SAVE_PING_DIRECTORIES = False
+
+ZINNIA_MARKUP_LANGUAGE = 'textile'
+
+XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
