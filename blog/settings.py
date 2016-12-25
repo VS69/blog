@@ -181,7 +181,6 @@ EMAIL_USE_SSL = config('EMAIL_USE_SSL', default=True, cast=bool)
 ADMINS = (('Admin', ADMIN_EMAIL),)
 MANAGERS = (('Manager', ADMIN_EMAIL),)
 
-
 SITE_ID = 1
 
 ZINNIA_PING_EXTERNAL_URLS = False
