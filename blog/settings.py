@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_xmlrpc',
     'mptt',
     'tagging',
+    # 'zinnia_threaded_comments',
     'zinnia',
 ]
 
@@ -207,3 +208,5 @@ ZINNIA_SAVE_PING_DIRECTORIES = False
 ZINNIA_MARKUP_LANGUAGE = 'textile'
 
 XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
+
+# COMMENTS_APP = 'zinnia_threaded_comments'

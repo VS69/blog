@@ -32,8 +32,11 @@ from zinnia.sitemaps import AuthorSitemap
 from zinnia.sitemaps import CategorySitemap
 from zinnia.sitemaps import EntrySitemap
 from zinnia.sitemaps import TagSitemap
+
 from zinnia.views.channels import EntryChannel
 
+
+admin.autodiscover()
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(url='/blog/', permanent=True)),

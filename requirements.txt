@@ -17,3 +17,4 @@ django-admin-tools
 admin-tools-zinnia
 django-app-namespace-template-loader
 feedparser
+zinnia-threaded-comments
