@@ -15,3 +15,5 @@ psycopg2
 Textile
 django-admin-tools
 admin-tools-zinnia
+django-app-namespace-template-loader
+feedparser

@@ -34,11 +34,11 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
-    # 'admin_tools',
-    # 'admin_tools.theming',
-    # 'admin_tools.menu',
-    # 'admin_tools.dashboard',
-    # 'admin_tools_zinnia',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+    'admin_tools_zinnia',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.sites',
@@ -70,7 +70,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -79,6 +78,11 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.contrib.messages.context_processors.messages',
                 'zinnia.context_processors.version',
+            ],
+            'loaders': [
+                'app_namespace.Loader',
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
             ],
         },
     },
@@ -115,13 +119,17 @@ CACHES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': config('DB_HOST', default='localhost'),
-        'USER': config('DB_USER', default=''),
-        'PASSWORD': config('DB_PASSWORD', default=''),
-        'NAME': config('DB_NAME', default=''),
-        'PORT': config('DB_PORT', default='5432', cast=int),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, '..', 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'HOST': config('DB_HOST', default='localhost'),
+    #     'USER': config('DB_USER', default=''),
+    #     'PASSWORD': config('DB_PASSWORD', default=''),
+    #     'NAME': config('DB_NAME', default=''),
+    #     'PORT': config('DB_PORT', default='5432', cast=int),
+    # }
 }
 
 
