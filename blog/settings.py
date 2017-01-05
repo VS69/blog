@@ -159,6 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 ZINNIA_SPAM_CHECKER_BACKENDS = (
     'zinnia.spam_checker.backends.long_enough',
+    'zinnia_mollom',
 )
 
 
@@ -218,3 +219,6 @@ XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
 ZINNIA_URL_SHORTENER_BACKEND = 'zinnia_bitly'
 BITLY_LOGIN = config('BITLY_LOGIN')
 BITLY_API_KEY = config('BITLY_API_KEY')
+
+MOLLOM_PUBLIC_KEY = config('MOLLOM_PUBLIC_KEY')
+MOLLOM_PRIVATE_KEY = config('MOLLOM_PRIVATE_KEY')
