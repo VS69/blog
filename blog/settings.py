@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'zinnia_bootstrap',
     'zinnia',
     'zinnia_markitup',
+    'django_bitly',
 ]
 
 MIDDLEWARE = [
@@ -213,3 +214,7 @@ ZINNIA_MARKUP_LANGUAGE = 'textile'
 XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
 
 # COMMENTS_APP = 'zinnia_threaded_comments'
+
+ZINNIA_URL_SHORTENER_BACKEND = 'zinnia_bitly'
+BITLY_LOGIN = config('BITLY_LOGIN')
+BITLY_API_KEY = config('BITLY_API_KEY')

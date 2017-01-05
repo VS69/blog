@@ -19,4 +19,6 @@ django-app-namespace-template-loader
 feedparser
 zinnia-theme-bootstrap
 zinnia-threaded-comments
-zinnia-wysiwyg-markitup
+zinnia-wysiwyg-markitup==1.1
+django-bitly==0.11.0
+zinnia-url-shortener-bitly
