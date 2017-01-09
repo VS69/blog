@@ -10,7 +10,7 @@ pytz
 pyparsing
 django-xmlrpc
 python-decouple
-django-blog-zinnia
+django-blog-zinnia==0.18.1
 psycopg2
 Textile
 django-admin-tools
