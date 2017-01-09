@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'mptt',
     'tagging',
     # 'zinnia_threaded_comments',
-    'zinnia_bootstrap',
+    # 'zinnia_bootstrap',
     'zinnia',
     'zinnia_markitup',
     'django_bitly',
@@ -87,7 +87,7 @@ TEMPLATES = [
                 'app_namespace.Loader',
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
-                'django.template.loaders.eggs.Loader',
+                # 'django.template.loaders.eggs.Loader',
             ],
         },
     },
@@ -168,7 +168,7 @@ ZINNIA_SPAM_CHECKER_BACKENDS = (
 
 LANGUAGE_CODE = 'uk'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
