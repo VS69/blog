@@ -25,6 +25,12 @@
 {% endblock breadcrumbs %}
 
 {% block sidebar %}
+<aside id="widget-welcome" class="widget">
+  <h3>Про мене</h3>
+  <p>
+    <a href="http://bit.ly/2iqFRoJ" title="Коротко про мене">Коротко про мене</a>
+  </p>
+</aside>
 <aside id="widget-categories" class="widget">
   <h3>
     <a href="{% url 'zinnia:category_list' %}">{% trans "Categories" %}</a>

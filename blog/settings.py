@@ -123,18 +123,18 @@ CACHES = {
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '..', 'db.sqlite3'),
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'HOST': config('DB_HOST', default='localhost'),
-    #     'USER': config('DB_USER', default=''),
-    #     'PASSWORD': config('DB_PASSWORD', default=''),
-    #     'NAME': config('DB_NAME', default=''),
-    #     'PORT': config('DB_PORT', default='5432', cast=int),
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, '..', 'db.sqlite3'),
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': config('DB_HOST', default='localhost'),
+        'USER': config('DB_USER', default=''),
+        'PASSWORD': config('DB_PASSWORD', default=''),
+        'NAME': config('DB_NAME', default=''),
+        'PORT': config('DB_PORT', default='5432', cast=int),
+    }
 }
 
 
@@ -222,3 +222,5 @@ BITLY_API_KEY = config('BITLY_API_KEY')
 
 MOLLOM_PUBLIC_KEY = config('MOLLOM_PUBLIC_KEY')
 MOLLOM_PRIVATE_KEY = config('MOLLOM_PRIVATE_KEY')
+
+ZINNIA_COPYRIGHT = 'Volodymyr Salitrynskyi'
