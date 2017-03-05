@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'zinnia',
     'zinnia_markitup',
     'django_bitly',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
@@ -224,3 +225,5 @@ BITLY_API_KEY = config('BITLY_API_KEY')
 
 MOLLOM_PUBLIC_KEY = config('MOLLOM_PUBLIC_KEY')
 MOLLOM_PRIVATE_KEY = config('MOLLOM_PRIVATE_KEY')
+
+X_FRAME_OPTIONS = 'DENY'
