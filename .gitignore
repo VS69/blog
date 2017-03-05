@@ -5,4 +5,5 @@
 *.egg
 *.idea
 .env
+data.json
 /.project
