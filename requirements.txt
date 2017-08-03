@@ -12,7 +12,7 @@ django-xmlrpc
 python-decouple
 django-blog-zinnia==0.18.1
 psycopg2
-Textile
+Textile<=2.3.12
 django-admin-tools
 admin-tools-zinnia
 django-app-namespace-template-loader
