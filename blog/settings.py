@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 from decouple import config, Csv
-from zinnia.xmlrpc import ZINNIA_XMLRPC_METHODS
+from zinnia.xmlrpc import XMLRPC_METHODS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -215,7 +215,7 @@ ZINNIA_SAVE_PING_DIRECTORIES = False
 
 ZINNIA_MARKUP_LANGUAGE = 'textile'
 
-XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
+# XMLRPC_METHODS = XMLRPC_METHODS
 
 # COMMENTS_APP = 'zinnia_threaded_comments'
 
